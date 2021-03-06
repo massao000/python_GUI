@@ -71,6 +71,8 @@ class Demo(QWidget):
         self.tab = QTabWidget()
         self.tab.addTab(self.tab_text1, 'T2')
         self.tab.addTab(self.tab_text2, 'T1')
+
+        self.slider = QSlider(Qt.Horizontal, self)
         
         self.grid = QGridLayout()
         self.grid.addWidget(title, 0,0)
@@ -87,6 +89,7 @@ class Demo(QWidget):
         self.grid.addWidget(self.combo, 7,0)
         self.grid.addWidget(self.listbox, 7,1)
         self.grid.addWidget(self.tab, 7,3)
+        self.grid.addWidget(self.slider, 8,0, 1,2)
         self.setLayout(self.grid)
 
     def button_click(self):
