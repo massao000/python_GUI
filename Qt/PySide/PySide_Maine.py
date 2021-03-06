@@ -1,5 +1,3 @@
-# import sys
-# import 
 from PySide2 import sys
 from PySide2 import *
 from PySide2.QtWidgets import *
@@ -123,4 +121,4 @@ if __name__ == '__main__':
     windows.show()
     sys.exit(app.exec_())
 
-    # 978179889
+# 100行

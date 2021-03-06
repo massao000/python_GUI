@@ -135,5 +135,6 @@ note.grid(row=7, column=3)
 scale = tk.Scale(frame2, orient="horizontal", length=300)
 scale.grid(columnspan=2, row=10, column=1, sticky=tk.W+tk.E)
 
-
 note.mainloop()
+
+# 100行

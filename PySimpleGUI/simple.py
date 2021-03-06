@@ -1,6 +1,5 @@
 import PySimpleGUI as sg
 
-
 sg.theme("dark blue")
 
 number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -51,9 +50,7 @@ while True:
         else:
             sg.Popup('ファイルが選択されていない')
 
-
-
-
-
     print(event, values)
 window.close()
+
+# 54行
