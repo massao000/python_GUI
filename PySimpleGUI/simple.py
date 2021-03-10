@@ -17,10 +17,11 @@ layout = [
 
     [sg.Button('ファイルパス表示', key='hyouji', button_color=('midnightblue', '#87cefa'))],
     [sg.Combo((number_list), default_value='コンボボックス', size=(15, 1)),
-    sg.Listbox(number_list, size=(10, 5)), sg.TabGroup([
-                                             [sg.Tab('T1', tab3_layout), 
-                                              sg.Tab('T2', tab4_layout)]])
-                                              ],
+        sg.Listbox(number_list, size=(10, 5)), 
+            sg.TabGroup([
+                [sg.Tab('T1', tab3_layout), 
+                 sg.Tab('T2', tab4_layout)]])
+    ],
     [sg.Slider(range=(0.0,100.0), default_value =0.0, resolution=1.0, orientation='h', size=(35, None))],
     ]
 
