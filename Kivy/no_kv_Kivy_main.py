@@ -7,7 +7,7 @@ from kivy import Config
 from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.checkbox import CheckBox
-from  kivy.uix.textinput import TextInput
+from kivy.uix.textinput import TextInput
 from kivy.uix.spinner import Spinner
 from kivy.uix.widget import Widget
 from kivy.core.window import Window
@@ -18,6 +18,7 @@ from kivy.uix.tabbedpanel import TabbedPanelHeader
 from kivy.uix.popup import Popup
 from kivy.lang import Builder
 from kivy.uix.recycleview import RecycleView
+from  kivy.uix.filechooser import FileChooser, FileChooserListLayout, FileChooserIconLayout
 
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
@@ -130,7 +131,7 @@ class Mein(App):
         ss = Label(text='ポップアップの表示')
         self.layout_pop.add_widget(ss)
         button3 = Button(text='閉じる')
-        button3.bind(on_press = self.popup_yes)
+        button3.bind(on_press = self.popup_close)
         self.layout_pop.add_widget(button3)
 
         self.popup = Popup(title='popup',
@@ -139,23 +140,24 @@ class Mein(App):
                         size=(400, 400))
 
         self.popup.open()
+
     def pop_f(self, tt):
-        self.layout_pop = GridLayout(cols=1, row_force_default=True, row_default_height=40)
-        box_pop = BoxLayout()
+        box_pop = BoxLayout(orientation="vertical")
 
-        ss = Label(text='sorry')
-        self.layout_pop.add_widget(ss)
-        button3 = Button(text='閉じる')
-        button3.bind(on_press = self.popup_yes)
-        self.layout_pop.add_widget(button3)
+        float_layout = FileChooser()
 
-        self.popup = Popup(title='sorry',
-                        content=self.layout_pop,
-                        size_hint=(0.4, 0.3),
-                        size=(400, 400))
+        float_layout_list = FileChooserListLayout()
+        float_layout.add_widget(float_layout_list)
+        box_pop.add_widget(float_layout)
+        
+        button3 = Button(text='閉じる', size_hint=(.3, .1))
+        button3.bind(on_press = self.popup_close)
+        box_pop.add_widget(button3)
+
+        self.popup = Popup(title='ファイル', content=box_pop)
         self.popup.open()
 
-    def popup_yes(self, instance):
+    def popup_close(self, instance):
         self.popup.dismiss()
 
 
