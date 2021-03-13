@@ -67,8 +67,8 @@ class Demo(QWidget):
         self.tab_text1 = QLabel('タブ1')
         self.tab_text2 = QLabel('タブ2')
         self.tab = QTabWidget()
-        self.tab.addTab(self.tab_text1, 'T2')
         self.tab.addTab(self.tab_text2, 'T1')
+        self.tab.addTab(self.tab_text1, 'T2')
 
         self.slider = QSlider(Qt.Horizontal, self)
         

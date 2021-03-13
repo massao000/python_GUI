@@ -52,8 +52,8 @@ frame2 = ttk.Frame(frame)
 frame2.grid(columnspan=2, column=0, row=8, padx=5, pady=5, sticky=tk.W+tk.E)
 
 
-style = ttk.Style()
-style.theme_use('classic')
+# style = ttk.Style()
+# style.theme_use('classic')
 
 
 ##### テキストの変換 #####
