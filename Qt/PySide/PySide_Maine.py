@@ -2,28 +2,15 @@ from PySide2 import sys
 from PySide2 import *
 from PySide2.QtWidgets import *
 from PySide2.QtCore import *
-# from PySide2.QtGui import *
-# from PySide2 import QtCore, QtGui, QtWidgets, QtQuickWidgets
-# from PySide2.QtUiTools import QUiLoader
-
-# print(dir(PySide2.QtWidgets))
-# class UISample(QtWidgets.QMainWindow):
-#     def __init__(self, parent=None):
-#         super(UISample, self).__init__(parent)
-
-# 今回はQGridLayoutでグリッド分けをしているほかには{move}で細かくできる
 class Demo(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle('PySide')
-        # self.setGeometry(0, 300, 300, 0)
         self.resize(400, 300)
         self.widget()
-        # self.text()
         
     def widget(self):
         title = QLabel('▼表示テキストの入力▼', self)
-        # title.move(0,0)
         self.titleEdit = QLineEdit()
 
         self.btn = QPushButton("実行", self)
@@ -55,14 +42,9 @@ class Demo(QWidget):
         self.combo.setEditable(True)
         self.combo.addItems(li)
         self.combo.currentIndex()
-        # self.combo.setCurrentIndex(self.combo.currentIndex())
-        # self.combo.setCurrentText('コンボックス')
-        # self.combo.setItemText(self.combo, 'コンボックス')
-        # self.combo.writeText('コンボックス')
 
         self.listbox = QListWidget()
         self.listbox.addItems(li)
-        # self.listbox.insertItem(0, 'aa')
 
         self.tab_text1 = QLabel('タブ1')
         self.tab_text2 = QLabel('タブ2')
@@ -105,10 +87,8 @@ class Demo(QWidget):
     def open_file_menu(self):
         directory = QFileDialog.getOpenFileName()
         self.file.setText(f'{directory[0]}')
-        # print(directory[0])
     
     def file_check_pop(self):
-        # print(self.file.text())
         if  self.file.text() != '':
             reply = QMessageBox.information(self, "popup表示", self.file.text(), QMessageBox.Ok)
         else:
