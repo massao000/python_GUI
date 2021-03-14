@@ -51,7 +51,7 @@ while True:
         else:
             sg.Popup('ファイルが選択されていない')
 
-    print(event, values)
+    # print(event, values)
 window.close()
 
 # 54行
