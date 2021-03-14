@@ -3,7 +3,6 @@ kivy.require("1.9.1")
 import japanize_kivy # 日本語表示
 from kivy.app import App
 
-from kivy import Config
 from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.checkbox import CheckBox
@@ -19,12 +18,14 @@ from kivy.uix.popup import Popup
 from kivy.lang import Builder
 from kivy.uix.recycleview import RecycleView
 from  kivy.uix.filechooser import FileChooser, FileChooserListLayout, FileChooserIconLayout
+from kivy.uix.scrollview import ScrollView
 
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.stacklayout import StackLayout
 
+from kivy import Config
 Config.set('graphics', 'width', '500')
 Config.set('graphics', 'height', '500')
 Config.write()
@@ -82,15 +83,32 @@ class Mein(App):
         self.layout.add_widget(self.box3)
 
         self.box4 = BoxLayout()
-        self.box4.add_widget(Spinner(text='リスト', 
+        self.box4.add_widget(Spinner(text='ダウンリスト', 
                                 values=Mein.l,
                                 size_hint=(None, 1),
                                 size=(100, 40),
+                                pos_hint={'center_x': .5, 'center_y': -1},
                                 ))
         
         self.tab = TabbedPanel(size_hint=(.5, 3),
                     pos_hint={'center_x': .5, 'center_y': -1},
                     do_default_tab=False)
+
+
+        self.list_box = BoxLayout(size_hint=(1, None))
+        self.list_box.orientation = 'vertical'
+
+        self.list_box.bind(minimum_height=self.list_box.setter('height'))
+        for i in range(11):
+            data = str(i)
+            btn = Label(text=data, height=30, size_hint=(1, None))
+            self.list_box.add_widget(btn)
+
+        self.scrol = ScrollView(size_hint=(1, None), size=(10, 100), size_hint_x=0.5, pos_hint={'center_x': .5, 'center_y': -1})
+
+        self.scrol.add_widget(self.list_box)
+        self.box4.add_widget(self.scrol)
+        
 
 
         tab_text_head = TabbedPanelHeader(text='T1')
