@@ -1,0 +1,33 @@
+FloatLayout:
+    size:640, 480 #意味なさそう…
+
+    Label:
+        size_hint: 0.5, 0.1
+        text: 'press your baggage number'
+        pos: 200, 200
+
+    TextInput:
+        size_hint: 0.5, 0.05
+        pos: 200, 100
+        line_height: 1
+        multiline: False
+
+
+    Button:
+        text: 'continue'
+        size_hint: 0.5, 0.05
+        pos: 200, 60
+
+    GridLayout:
+        cols: 2
+        size_hint: 0.25, 0.25
+        pos: 500, 400
+
+        Button:
+            text: 'A'
+        Button:
+            text: 'B'
+        Button:
+            text: 'C'
+        Button:
+            text: 'D'

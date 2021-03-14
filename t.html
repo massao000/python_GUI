@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr bgcolor="deepskyblue">
+              <th width="150" height="100">ライブラリ</th>
+              <th width="150" height="100">使いやすさ</th>
+              <th width="150" height="100">コードの書きやすさ</th>
+              <th width="150" height="100">コードの短さ</th>
+              <th width="150" height="100">日本語の記事の多さ</th>
+              <th width="150" height="100">公式ドキュメント(日本語)</th>
+              <th width="150" height="100"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+              <th>Tkinter</th>
+              <th><span style="font-size: 25px; color: red">◎</span></th>
+              <th><span style="font-size: 25px; color: red">◎</span></th>
+              <th><span style="font-size: 22px; color: red">○</span></th>
+              <th><span style="font-size: 25px; color: red">◎</span></th>
+              <th><span style="font-size: 25px; color: red">◎</span></th>
+            </tr>
+            <tr>
+              <th bgcolor="paleturquoise">Kivy</th>
+              <th bgcolor="paleturquoise"><span style="font-size: 22px; color: red">○</span></th>
+              <th bgcolor="paleturquoise"><span style="font-size: 22px; color: red">○</span></th>
+              <th bgcolor="paleturquoise"><span style="font-size: 22px; color: black">△</span></th>
+              <th bgcolor="paleturquoise"><span style="font-size: 22px; color: black">△</span></th>
+              <th bgcolor="paleturquoise"><span style="font-size: 22px; color: black">△</span></th>
+            </tr>
+            <tr>
+              <th>PySide2</th>
+              <th><span style="font-size: 22px; color: red">○</span></th>
+              <th><span style="font-size: 22px; color: red">○</span></th>
+              <th><span style="font-size: 22px; color: red">○</span></th>
+              <th><span style="font-size: 22px; color: black">△</span></th>
+              <th><span style="font-size: 22px; color: black">△</span></th>
+            </tr>
+            <tr>
+              <th bgcolor="paleturquoise">PySimpleGUI</th>
+              <th bgcolor="paleturquoise"><span style="font-size: 25px; color: red">◎</span></th>
+              <th bgcolor="paleturquoise"><span style="font-size: 25px; color: red">◎</span></th>
+              <th bgcolor="paleturquoise"><span style="font-size: 25px; color: red">◎</span></th>
+              <th bgcolor="paleturquoise"><span style="font-size: 22px; color: black">△</span></th>
+              <th bgcolor="paleturquoise"><span style="font-size: 22px; color: black">△</span></th>
+            </tr>
+            <tr>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+      <thead>
+          <tr bgcolor="deepskyblue">
+            <th width="200" height="100">ライブラリ</th>
+            <th width="200" height="100">特徴</th>
+            <th width="200" height="100">メリット</th>
+            <th width="200" height="100">デメリット</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr height="120">
+            <th>Tkinter</th>
+            <th>
+              <span style="font-size: 15px;">
+                Pythonの標準ライブラリ
+              </span>
+            </th>
+            <th>
+              <span style="font-size: 15px;">
+                標準ライブラリなのですぐに動かせる
+              </span>
+          　</th>
+            <th>
+              <span style="font-size: 15px;">
+                コードが複雑になる
+                <p>見た目が古い</p>
+              </span>
+            </th>
+          </tr>
+          <tr height="120">
+            <th bgcolor="paleturquoise">Kivy</th>
+            <th bgcolor="paleturquoise">
+              <span style="font-size: 15px;">
+                モダンな見た目
+                <p>kivy独自のKV言語が使える</p>
+              </span>
+            </th>
+            <th bgcolor="paleturquoise">
+              <span style="font-size: 15px;">
+                ios android アプリの開発が可能
+                <p>開発環境に依存しない</p>
+              </span>
+            </th>
+            <th bgcolor="paleturquoise">
+              <span style="font-size: 15px;">
+                日本語のドキュメントが少なく作るのに時間がかかる
+            　</span>
+            </th>
+          </tr>
+          <tr height="120">
+            <th>PySide2</th>
+            <th>
+              <span style="font-size: 15px;">
+                QtのPythonバインディング
+                <p>QtPyよりライセンスが使いやすい</p>
+              </span>
+            </th>
+            <th>
+              <span style="font-size: 15px;">
+                開発環境に依存しない
+            　</span>
+            </th>
+            <th>
+              <span style="font-size: 15px;">
+                複雑になると動作が重い
+            　</span>
+            </th>
+          </tr>
+          <tr height="120">
+            <th bgcolor="paleturquoise" >PySimpleGUI</th>
+            <th bgcolor="paleturquoise">
+              <span style="font-size: 15px;">
+                二次元のリストで表現される
+                <p>簡単にGUIアプリの開発が可能</p>
+              </span>
+            </th>
+            <th bgcolor="paleturquoise">
+              <span style="font-size: 15px;">
+                コード量が少ない
+                <p>簡単に書ける</p>
+                <!-- <p>公式ドキュメントに沢山のサンプルがある</p> -->
+              </span>
+            </th>
+            <th bgcolor="paleturquoise">
+              <span style="font-size: 15px;">カスタマイズ性が劣る
+                <!-- <p>日本語記事が少なめ</p> -->
+              </span>
+            </th>
+          </tr>
+          <tr>
+          </tr>
+      </tbody>
+  </table>
+</body>
+</html>

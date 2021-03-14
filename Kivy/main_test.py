@@ -77,10 +77,10 @@ class Mein(App):
         self.inp2 = TextInput(text='', size_hint_x=2)
         self.box3.add_widget(self.inp2)
 
-        button_f = Button(text='フォルダ選択')
-        self.box3.add_widget(button_f)
-        button_f.bind(on_press = self.pop_f)
+        button2 = Button(text='フォルダ選択')
+        self.box3.add_widget(button2)
         self.layout.add_widget(self.box3)
+
 
         self.box4 = BoxLayout()
         self.box4.add_widget(Spinner(text='リスト', 
@@ -89,33 +89,7 @@ class Mein(App):
                                 size=(100, 40),
                                 # pos=(200, 60)
                                 ))
-        
-        self.tab = TabbedPanel(size_hint=(.5, 3),
-                    pos_hint={'center_x': .5, 'center_y': -1},
-                    do_default_tab=False)
-        # self.float = FloatLayout()
-
-        tab_text_head = TabbedPanelHeader(text='T1')
-        tab_text_head.content = Label(text='タブ1') 
-
-        tab_text_head2 = TabbedPanelHeader(text='T2')
-        tab_text_head2.content = Label(text='タブ2')
-
-        self.tab.add_widget(tab_text_head)
-        self.tab.add_widget(tab_text_head2)
-        self.box4.add_widget(self.tab)
-        # self.layout.add_widget(self.tab)
         self.layout.add_widget(self.box4)
-
-        # self.layout.add_widget(TabbedPanelItem(group="g1", text='first tab'))
-
-        # self.data = [{'text': str(x)} for x in range(10)]
-        # self.layout.add_widget(RecycleView(scroll_type=['bars', 'content'], ))
-
-        
-        self.float = FloatLayout()
-        self.float.add_widget(Slider(min=-100, max=100, value=25, width=1))
-        self.layout.add_widget(self.float)
 
         return self.layout
     
@@ -151,21 +125,6 @@ class Mein(App):
         #     )
         # popup = Popup(title='Test popup', content=Label(text='Hello world'),
         #       auto_dismiss=False)
-        self.popup.open()
-    def pop_f(self, tt):
-        self.layout_pop = GridLayout(cols=1, row_force_default=True, row_default_height=40)
-        box_pop = BoxLayout()
-
-        ss = Label(text='できていないです')
-        self.layout_pop.add_widget(ss)
-        button3 = Button(text='閉じる')
-        button3.bind(on_press = self.popup_yes)
-        self.layout_pop.add_widget(button3)
-
-        self.popup = Popup(title='sorry',
-                        content=self.layout_pop,
-                        size_hint=(0.4, 0.3), # (None, None),
-                        size=(400, 400))
         self.popup.open()
 
     def popup_yes(self, instance):
