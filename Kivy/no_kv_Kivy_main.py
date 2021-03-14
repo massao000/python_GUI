@@ -95,6 +95,7 @@ class Mein(App):
                     do_default_tab=False)
 
 
+        # 表示だけでイベントのコードは書いていない
         self.list_box = BoxLayout(size_hint=(1, None))
         self.list_box.orientation = 'vertical'
 
