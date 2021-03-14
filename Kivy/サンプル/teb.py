@@ -4,8 +4,8 @@ import japanize_kivy # 日本語表示
 from kivy.app import App
 
 from kivy.uix.label import Label
-from kivy.uix.button import Button
-from kivy.uix.checkbox import CheckBox
+from kivy.uix.tabbedpanel import TabbedPanel
+from kivy.uix.tabbedpanel import TabbedPanelHeader 
 
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
@@ -20,43 +20,23 @@ class Mein(App):
     title = 'kivy demo button'
 
     def build(self):
-        self.layout = GridLayout(cols=1, row_force_default=True, row_default_height=40)
-        
-        self.label_check = Label(text='チェックボックス', size_hint_x=None, width=160)
-        self.layout.add_widget(self.label_check)
-        
-        self.box = BoxLayout()
-        self.check_box = CheckBox(size_hint_x=None, width=100, active=True)
-        self.box.add_widget(self.check_box)
-        self.check_box = CheckBox(size_hint_x=None, width=100)
-        self.box.add_widget(self.check_box)
-        self.check_box = CheckBox(size_hint_x=None, width=100, active=True)
-        self.box.add_widget(self.check_box)
-        self.layout.add_widget(self.box)
+        self.box4 = BoxLayout()
+        self.tab = TabbedPanel(do_default_tab=False)
+                    
+        tab_text_head = TabbedPanelHeader(text='T1')
+        tab_text_head.content = Label(text='タブ1') 
 
-        self.label_radio = Label(text='ラジオボタン', size_hint_x=None, width=160)
-        self.layout.add_widget(self.label_radio)
+        tab_text_head2 = TabbedPanelHeader(text='T2')
+        tab_text_head2.content = Label(text='タブ2')
 
-        self.box2 = BoxLayout()
-        self.radio_box = CheckBox(group='radio',size_hint_x=None, width=100, active=True)
-        self.box2.add_widget(self.radio_box)
-        self.radio_box = CheckBox(group='radio',size_hint_x=None, width=100)
-        self.box2.add_widget(self.radio_box)
-        self.radio_box = CheckBox(group='radio',size_hint_x=None, width=100)
-        self.box2.add_widget(self.radio_box)
-        self.layout.add_widget(self.box2)
-        
-        float_layout = FloatLayout(size=(300, 300))
-        button = Button(text='実行', size_hint=(.3, 1), pos=(20, 20))
-        # button.bind(on_press = self.label_change)
-        float_layout.add_widget(button)
-        self.layout.add_widget(float_layout)
+        tab_text_head3 = TabbedPanelHeader(text='T3')
+        tab_text_head3.content = Label(text='タブ3')
 
-        return self.layout
+        self.tab.add_widget(tab_text_head)
+        self.tab.add_widget(tab_text_head2)
+        self.tab.add_widget(tab_text_head3)
+        self.box4.add_widget(self.tab)
 
-    def click(self, test):
-        # 処理を書く
-        pass
-        
+        return self.box4
     
 Mein().run()
