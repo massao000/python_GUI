@@ -3,6 +3,7 @@
 /get-pip.py
 /gui_file
 /test.py
+/.gitignore
 /__pycache__
 /課題様にpythonguiについてまとめ.txt
 /Qt/PyQt5
@@ -16,11 +17,11 @@
 /Kivy/kvfあり
 /Kivy/text
 /Kivy/公式
+/Kivy/test
 
 /tkinter/test
 /tkinter/ttktest.py
 
 /PySimpleGUI/test
 /PySimpleGUI/simple.py
-/Kivy/Kivy_Maine.py
-/Kivy/main_test copy.py
+/その他
