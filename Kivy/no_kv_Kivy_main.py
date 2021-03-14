@@ -110,7 +110,6 @@ class Mein(App):
         self.box4.add_widget(self.scrol)
         
 
-
         tab_text_head = TabbedPanelHeader(text='T1')
         tab_text_head.content = Label(text='タブ1') 
 
