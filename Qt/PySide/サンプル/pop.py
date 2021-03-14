@@ -16,9 +16,6 @@ class Demo(QWidget):
         # ボタンがclickされたときの処理
         self.btn_pop.clicked.connect(self.pop)
         self.btn_pop.setGeometry(50, 50, 100, 30)
-        # self.grid = QGridLayout()
-        # self.grid.addWidget(self.btn_pop, 0,0)
-        # self.setLayout(self.grid)
     
     def pop(self):
         reply = QMessageBox.information(self, "popup表示", 'ポップアップの表示', QMessageBox.Ok)
