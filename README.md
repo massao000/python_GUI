@@ -1,4 +1,7 @@
 # Python GUI 作成中
+
+GUiのライブラリを使うときはPythonで仮想環境を作ることを推奨します
+
 ```kivy
 $ pip install kivy japanize_kivy
 ```
