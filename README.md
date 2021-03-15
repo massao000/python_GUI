@@ -1,4 +1,18 @@
 # Python GUI 作成中
+```kivy
+$ pip install kivy japanize_kivy
+```
+
+japanize_kivyはkivyで日本語を使えるようにするもの
+
+```PySimpleGUI
+$ pip install pysimplegui
+```
+
+```PySide2
+$ pip install PySide2
+```
+
 ![image](https://user-images.githubusercontent.com/69783019/111071112-f8cf2880-8517-11eb-9f08-394263a4ced9.png)
 
 ![image](https://user-images.githubusercontent.com/69783019/111071181-451a6880-8518-11eb-88f5-6d2c1f0a3c2d.png)
