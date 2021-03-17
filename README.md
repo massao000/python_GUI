@@ -1,4 +1,4 @@
-# Python GUI 作成中
+# Python GUI
 
 ※GUIのライブラリを使うときはPythonで仮想環境を作ることを推奨します
 
