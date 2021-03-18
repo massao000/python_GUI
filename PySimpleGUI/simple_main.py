@@ -27,7 +27,6 @@ layout = [
 
 window = sg.Window('PySimpleGUI demo', layout)
 
-text_elem = window['Check']
 while True:
     event, values = window.read()
 
@@ -35,23 +34,14 @@ while True:
         break
     if event == '実行':
         window['out-text'].update(values['in-text'])
-    elif event == 'pop':
+    if event == 'pop':
         sg.Popup('ポップアップの表示', button_color=('midnightblue', '#87cefa'))
 
-    text_convert = ''
-    if values['test']:
-        text_convert = 'on'
-    else:
-        text_convert = 'off'
-    text_elem.update(text_convert)
+    window['Check'].update('on' if values['test'] else 'off')
 
     if event == 'hyouji':
-        if values["file"] != '':
-            sg.Popup(values['file'])
-        else:
-            sg.Popup('ファイルが選択されていない')
+        sg.popup(values["file"] if values["file"] != '' else 'ファイルが選択されていない')
 
-    # print(event, values)
 window.close()
 
 # 54行
