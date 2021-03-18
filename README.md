@@ -5,16 +5,26 @@
 pip を使ったモジュールのダウンロード方法
 
 ```Kivy
-$ pip install kivy japanize_kivy
+Kivy pipインストール
+
+$ pip install kivy
+```
+
+```Kivy
+$ pip install japanize_kivy
 ```
 
 japanize_kivyはkivyで日本語を使えるようにするもの
 
 ```PySimpleGUI
+PySimpleGUI pipインストール
+
 $ pip install pysimplegui
 ```
 
 ```PySide2
+PySide2 pipインストール
+
 $ pip install PySide2
 ```
 # Kivy sample
